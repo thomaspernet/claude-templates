@@ -47,7 +47,7 @@ claude-templates add security ./my-api
 | Template | Description | Details |
 |----------|-------------|---------|
 | `coding` | Full-stack development (Python + JS/TS, DDD architecture) | DDD 4-layer architecture, backend/frontend path-scoped rules, code review agent, commit/verify workflows, BUGS.md and MISTAKES.md tracking |
-| `analysis` | Data analysis (pandas, polars, notebooks, visualization) | Reproducible workflows, pandas/polars best practices, visualization standards, notebook execution commands, systematic EDA skills |
+| `analysis` | Data analysis (pandas, polars, notebooks, provenance tracking) | Three-stage workflow (data-source → data-processing → data-analysis), provenance tracking, process-over-code explanations, EDA skills, paper section drafting |
 | `research` | Literature review, knowledge synthesis, academic writing | Source evaluation rules, citation management, academic writing conventions, literature search commands, WebFetch permissions |
 | `data-engineering` | ETL pipelines, databases, data quality, orchestration | Pipeline idempotency rules, database conventions, validation workflows, pipeline building skills, BUGS.md and MISTAKES.md tracking |
 | `writing` | Documentation, articles, style guides, editing workflows | Style guide rules, review process workflows, draft review commands, document writing skills |

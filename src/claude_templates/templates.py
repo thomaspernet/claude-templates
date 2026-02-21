@@ -16,11 +16,11 @@ TEMPLATES: dict[str, dict] = {
         ),
     },
     "analysis": {
-        "description": "Data analysis (pandas, polars, notebooks, visualization)",
+        "description": "Data analysis (pandas, polars, notebooks, provenance tracking)",
         "details": (
-            "Configures reproducible data analysis workflows with pandas/polars "
-            "best practices, visualization standards, notebook execution commands, "
-            "and systematic EDA skills."
+            "Three-stage workflow: data-source (raw downloads), data-processing "
+            "(clean, enrich), data-analysis (figures, tables). Provenance tracking, "
+            "process-over-code explanations, EDA skills, and paper section drafting."
         ),
     },
     "research": {

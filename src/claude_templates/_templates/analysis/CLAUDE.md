@@ -1,65 +1,70 @@
 # {PROJECT_NAME}
 
-## BUGS.md and MISTAKES.md
-
-Read both files at the start of every session. If you encounter a bug or make a mistake, update the relevant file before continuing.
-
 ## Project & Tech
 
-- Python with pandas, polars, matplotlib, seaborn, plotly, scikit-learn
-- Jupyter notebooks for exploration and presentation
-- `uv` for dependency management
-- Data formats: CSV, Parquet, JSON
+- **Language**: Python, managed with `uv`
+- **Libraries**: pandas, polars, matplotlib, seaborn, plotly, scikit-learn
+- **Notebooks**: Jupyter for exploration, processing, and presentation
+- **Data formats**: CSV, Parquet, JSON, or cloud storage (S3/Athena optional)
 
 ## Architecture
 
 ```
-notebooks/          — exploration and presentation notebooks
-src/                — reusable functions and modules
-data/
-  raw/              — original, immutable data files
-  processed/        — cleaned and transformed data
-  output/           — final datasets for delivery
-reports/
-  figures/          — saved charts and visualizations
-  tables/           — exported summary tables
+data-source/        Download or collect raw data from external providers
+data-processing/    Clean, transform, enrich, create analysis-ready datasets
+data-analysis/      Figures, tables, and final analysis notebooks
+src/                Shared utility modules (imported by notebooks)
 ```
+
+### `data-source/`
+
+Scripts and notebooks that acquire raw data. Each must document: where the data comes from, what it contains, and how it is stored. Raw data is immutable once downloaded — never modify source files.
+
+### `data-processing/`
+
+Notebooks and scripts that clean, join, filter, aggregate, and enrich data into analysis-ready datasets. Each processing step must document: input data, transformations applied, and output schema.
+
+### `data-analysis/`
+
+Analysis notebooks that produce the figures and tables. Maintain a **single source-of-truth notebook** for key results. Additional notebooks for exploratory analysis or individual figures.
 
 ## Critical Rules
 
-- **Never modify raw data files.** `data/raw/` is read-only.
-- All transformations must be reproducible from raw data.
-- Pin random seeds for any stochastic operations (`random_state=42`).
-- Always specify `dtype` when reading data files.
-- Document assumptions inline where they affect logic.
-- Extract reusable logic into `src/` functions — notebooks are for orchestration, not library code.
+1. **Explain process, never code** — When describing a result, explain the data flow (source → processing → output), not the Python implementation.
+2. **Full transparency** — Always trace results back to their source. Reference `data-source/` scripts and `data-processing/` steps.
+3. **Single source of truth** — Key results live in one notebook in `data-analysis/`. This is the canonical reference.
+4. **Extract code to modules** — Keep notebooks lean. Reusable logic goes in `src/`. Use `%load_ext autoreload` / `%autoreload 2` at the top of every notebook.
+5. **Notebooks are documents** — Markdown cells explain intent and interpret results. Short paragraphs, academic tone. Prefer tables and figures over print statements.
+6. **Data provenance is mandatory** — Every derived dataset must document: source data, joins, filters, and logic applied.
+7. **Reproducibility** — Every result must be regenerable from raw data + code. Pin random seeds (`random_state=42`). Always specify `dtype` when reading data files.
 
 ## Code Style
 
-- Type hints on all functions in `src/`.
-- Docstrings with parameter descriptions on all public functions.
-- `snake_case` everywhere (variables, functions, files).
-- Notebooks: markdown cells explain the **why**, code cells do the **what**.
-- Keep notebook cells short — one logical step per cell.
+- `snake_case` everywhere (variables, functions, files)
+- Type hints on all functions in `src/`
+- Docstrings with parameter descriptions on all public functions
 - **Prefer clarity and readability** over cleverness in all code
-- Organize modules into **folders and subfolders** by domain — avoid many files under the same directory
+- Organize code into **folders and subfolders** by domain — avoid many files under the same directory
+- Markdown cells explain the **why**, code cells do the **what**
+- Keep notebook cells short — one logical step per cell
 
 ## Dev Commands
 
 ```bash
-uv run pytest              # run tests for src/ modules
-uv run jupyter lab         # launch notebook environment
-uv run ruff check          # lint Python files
+uv run pytest              # Run tests for src/ modules
+uv run jupyter lab         # Launch notebook environment
+uv run ruff check          # Lint Python files
 ```
 
 ## Testing
 
-- `pytest` for all functions in `src/`.
-- Notebooks validated by executing top-to-bottom with `jupyter nbconvert --execute`.
-- Test edge cases: empty DataFrames, NaN values, type mismatches.
+- `pytest` for all functions in `src/`
+- Notebooks validated by executing top-to-bottom with `jupyter nbconvert --execute`
+- Test edge cases: empty DataFrames, NaN values, type mismatches
 
 ## Workflow
 
 - Conventional commits: `fix:`, `feat:`, `refactor:`, `docs:`, `chore:`, `test:`
-- Reproducibility first — every result must be regenerable from raw data + code.
-- Commit notebooks with cleared outputs unless they serve as reports.
+- Reproducibility first — every result must be regenerable from raw data + code
+- Commit notebooks with cleared outputs unless they serve as reports
+- When compacting context, preserve: data provenance, processing decisions, key results, data issues found
