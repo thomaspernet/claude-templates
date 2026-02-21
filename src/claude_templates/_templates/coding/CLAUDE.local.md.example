@@ -1,0 +1,19 @@
+# Local Credentials (GITIGNORED — never commit this file)
+
+## Production
+- URL: https://example.com
+- Admin: admin@example.com / {password}
+
+## Database
+- Host: localhost:5432
+- Name: {db_name}
+- User: {db_user}
+- Password: {db_password}
+
+## API Keys
+- OPENAI_API_KEY: sk-...
+- ANTHROPIC_API_KEY: sk-ant-...
+
+## Local Development
+- Backend: http://localhost:8000
+- Frontend: http://localhost:3000

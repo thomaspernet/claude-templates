@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-templates"
+version = "0.1.0"
+description = "Simple CLI to apply Claude Code project templates"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Thomas Pernet-Coudrier", email = "t.pernetcoudrier@gmail.com"}
+]
+keywords = ["claude", "claude-code", "templates", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "click>=8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+claude-templates = "claude_templates.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/thomaspernet/claude-templates"
+Repository = "https://github.com/thomaspernet/claude-templates"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["claude_templates*"]
+
+[tool.setuptools.package-data]
+claude_templates = ["_templates/**/*", "_templates/**/.*", "_templates/**/.claude/**/*"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=claude_templates --cov-report=term-missing"
