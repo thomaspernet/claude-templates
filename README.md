@@ -51,6 +51,7 @@ claude-templates add security ./my-api
 | `research` | Literature review, knowledge synthesis, academic writing | Source evaluation rules, citation management, academic writing conventions, literature search commands, WebFetch permissions |
 | `data-engineering` | ETL pipelines, databases, data quality, orchestration | Pipeline idempotency rules, database conventions, validation workflows, pipeline building skills, BUGS.md and MISTAKES.md tracking |
 | `writing` | Documentation, articles, style guides, editing workflows | Style guide rules, review process workflows, draft review commands, document writing skills |
+| `research-analytics` | Academic research with data pipelines (AWS Athena, paper tables/figures) | Three-stage workflow (data-source → data-processing → data-analysis), provenance tracking, paper section drafting, explain-table command |
 
 ## Available Modules
 

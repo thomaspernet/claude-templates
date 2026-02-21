@@ -46,6 +46,14 @@ TEMPLATES: dict[str, dict] = {
             "draft review commands, and document writing skills."
         ),
     },
+    "research-analytics": {
+        "description": "Academic research with data pipelines (AWS Athena, paper tables/figures)",
+        "details": (
+            "Three-stage workflow: data-source (external downloads to S3/Glue), "
+            "data-processing (Athena queries, enrichment), data-analysis (paper figures/tables). "
+            "Agent explains process not code, traces provenance, and drafts paper sections."
+        ),
+    },
 }
 
 
