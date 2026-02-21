@@ -44,63 +44,36 @@ claude-templates add security ./my-api
 
 ## Available Templates
 
-| Template | Description |
-|----------|-------------|
-| `coding` | Full-stack development (Python + JS/TS, DDD architecture) |
-| `analysis` | Data analysis (pandas, polars, notebooks, visualization) |
-| `research` | Literature review, knowledge synthesis, academic writing |
-| `data-engineering` | ETL pipelines, databases, data quality, orchestration |
-| `writing` | Documentation, articles, style guides, editing workflows |
+| Template | Description | Details |
+|----------|-------------|---------|
+| `coding` | Full-stack development (Python + JS/TS, DDD architecture) | DDD 4-layer architecture, backend/frontend path-scoped rules, code review agent, commit/verify workflows, BUGS.md and MISTAKES.md tracking |
+| `analysis` | Data analysis (pandas, polars, notebooks, visualization) | Reproducible workflows, pandas/polars best practices, visualization standards, notebook execution commands, systematic EDA skills |
+| `research` | Literature review, knowledge synthesis, academic writing | Source evaluation rules, citation management, academic writing conventions, literature search commands, WebFetch permissions |
+| `data-engineering` | ETL pipelines, databases, data quality, orchestration | Pipeline idempotency rules, database conventions, validation workflows, pipeline building skills, BUGS.md and MISTAKES.md tracking |
+| `writing` | Documentation, articles, style guides, editing workflows | Style guide rules, review process workflows, draft review commands, document writing skills |
 
 ## Available Modules
 
-### AI / LLM Engineering
-
-| Module | Description |
-|--------|-------------|
-| `agent-design` | Agent architecture, tool design, instruction builders, anti-patterns |
-| `prompt-engineering` | System prompt structure, instruction/rule/skill layers, testing prompts |
-
-### Databases
-
-| Module | Description |
-|--------|-------------|
-| `cypher-neo4j` | Cypher query patterns, MERGE vs CREATE, indexing, parameterized queries |
-| `sql-postgres` | SQL style, CTEs, window functions, indexing, migrations, connection pooling |
-| `data-modeling` | Schema design, normalization, graph modeling, naming conventions |
-
-### Python Patterns
-
-| Module | Description |
-|--------|-------------|
-| `fastapi` | Router organization, dependency injection, error handling, async endpoints |
-| `pydantic` | Model patterns, validators, serialization, discriminated unions |
-| `async-python` | asyncio patterns, event loop rules, common pitfalls, testing async code |
-| `notebook` | Notebook style, markdown cells, code extraction, autoreload, exportable documents |
-
-### Frontend
-
-| Module | Description |
-|--------|-------------|
-| `react-nextjs` | Server/Client Components, App Router, state management, data fetching |
-| `tailwind-css` | Utility conventions, responsive design, component extraction, dark mode |
-
-### DevOps / Infrastructure
-
-| Module | Description |
-|--------|-------------|
-| `docker` | Dockerfile best practices, multi-stage builds, compose, health checks |
-| `ci-cd` | GitHub Actions patterns, test/lint/deploy stages, secrets handling |
-| `git-workflow` | Branching strategy, PR conventions, conventional commits, code review |
-
-### General Engineering
-
-| Module | Description |
-|--------|-------------|
-| `testing-strategy` | Test pyramid, mocking strategy, fixture patterns, TDD workflow |
-| `api-design` | REST conventions, versioning, pagination, error responses, OpenAPI |
-| `logging-observability` | Structured logging, log levels, correlation IDs, tracing, metrics |
-| `security` | OWASP top 10, input validation, auth patterns, secrets management |
+| Module | Category | Description |
+|--------|----------|-------------|
+| `agent-design` | AI / LLM Engineering | Agent architecture, tool design, instruction builders, anti-patterns |
+| `prompt-engineering` | AI / LLM Engineering | System prompt structure, instruction/rule/skill layers, testing prompts |
+| `cypher-neo4j` | Databases | Cypher query patterns, MERGE vs CREATE, indexing, parameterized queries |
+| `sql-postgres` | Databases | SQL style, CTEs, window functions, indexing, migrations, connection pooling |
+| `data-modeling` | Databases | Schema design, normalization, graph modeling, naming conventions |
+| `fastapi` | Python Patterns | Router organization, dependency injection, error handling, async endpoints |
+| `pydantic` | Python Patterns | Model patterns, validators, serialization, discriminated unions |
+| `async-python` | Python Patterns | asyncio patterns, event loop rules, common pitfalls, testing async code |
+| `notebook` | Python Patterns | Notebook style, markdown cells, code extraction, autoreload, exportable documents |
+| `react-nextjs` | Frontend | Server/Client Components, App Router, state management, data fetching |
+| `tailwind-css` | Frontend | Utility conventions, responsive design, component extraction, dark mode |
+| `docker` | DevOps / Infrastructure | Dockerfile best practices, multi-stage builds, compose, health checks |
+| `ci-cd` | DevOps / Infrastructure | GitHub Actions patterns, test/lint/deploy stages, secrets handling |
+| `git-workflow` | DevOps / Infrastructure | Branching strategy, PR conventions, conventional commits, code review |
+| `testing-strategy` | General Engineering | Test pyramid, mocking strategy, fixture patterns, TDD workflow |
+| `api-design` | General Engineering | REST conventions, versioning, pagination, error responses, OpenAPI |
+| `logging-observability` | General Engineering | Structured logging, log levels, correlation IDs, tracing, metrics |
+| `security` | General Engineering | OWASP top 10, input validation, auth patterns, secrets management |
 
 ## What Gets Installed
 
