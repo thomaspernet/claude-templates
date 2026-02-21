@@ -24,9 +24,9 @@ Thumbs.db
 # uv
 uv.lock
 
-# Claude Code local files
-CLAUDE.local.md
-.claude/settings.local.json
+# Claude Code local files (root project only, not template files)
+/CLAUDE.local.md
+/.claude/settings.local.json
 
 # Test artifacts
 .coverage

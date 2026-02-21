@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Grep(*)",
+      "Read(*)",
+      "Write(*)",
+      "Glob(*)",
+      "Edit(*)",
+      "WebFetch(domain:scholar.google.com)",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:semanticscholar.org)",
+      "WebFetch(domain:en.wikipedia.org)"
+    ]
+  }
+}
