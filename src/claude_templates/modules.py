@@ -50,6 +50,11 @@ MODULES: dict[str, dict] = {
         "description": "asyncio patterns, event loop rules, common pitfalls, testing async code",
         "has_skill": False,
     },
+    "notebook": {
+        "category": "Python Patterns",
+        "description": "Notebook style, markdown cells, code extraction, autoreload, exportable documents",
+        "has_skill": False,
+    },
     # Frontend
     "react-nextjs": {
         "category": "Frontend",

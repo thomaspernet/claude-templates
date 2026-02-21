@@ -29,6 +29,8 @@ assets/             Images, diagrams, supporting files
 - No tabs — spaces only
 - Heading hierarchy: H1 (title), H2 (sections), H3 (subsections) — no deeper
 - Blank line before and after headings, lists, and code blocks
+- **Prefer clarity and readability** — direct language, no unnecessary complexity
+- Organize documents into **folders and subfolders** by topic — avoid many files under the same directory
 
 ## Draft Stages
 

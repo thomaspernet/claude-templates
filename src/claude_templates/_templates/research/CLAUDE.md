@@ -56,6 +56,8 @@ Each file in `notes/` should follow:
 - Active voice preferred
 - Reference-style links for URLs
 - One sentence per line (diff-friendly)
+- **Prefer clarity and readability** — direct language, no unnecessary jargon
+- Organize files into **folders and subfolders** by topic — avoid many files under the same directory
 
 ## Workflow
 

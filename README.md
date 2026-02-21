@@ -76,6 +76,7 @@ claude-templates add security ./my-api
 | `fastapi` | Router organization, dependency injection, error handling, async endpoints |
 | `pydantic` | Model patterns, validators, serialization, discriminated unions |
 | `async-python` | asyncio patterns, event loop rules, common pitfalls, testing async code |
+| `notebook` | Notebook style, markdown cells, code extraction, autoreload, exportable documents |
 
 ### Frontend
 

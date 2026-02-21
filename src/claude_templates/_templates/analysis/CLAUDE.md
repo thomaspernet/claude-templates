@@ -41,6 +41,8 @@ reports/
 - `snake_case` everywhere (variables, functions, files).
 - Notebooks: markdown cells explain the **why**, code cells do the **what**.
 - Keep notebook cells short — one logical step per cell.
+- **Prefer clarity and readability** over cleverness in all code
+- Organize modules into **folders and subfolders** by domain — avoid many files under the same directory
 
 ## Dev Commands
 

@@ -51,6 +51,8 @@ Dependencies flow **inward only**. Never import from an outer layer.
 - Early returns to avoid deep nesting
 - Fix root causes, not symptoms
 - Start simple, add complexity only when needed
+- **Prefer clarity and readability** over cleverness in all code
+- Organize code into **folders and subfolders** by domain — avoid many files under the same directory
 
 ## Dev Commands
 

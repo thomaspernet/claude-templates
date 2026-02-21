@@ -43,6 +43,8 @@ Each pipeline is a self-contained module: extract → transform → load.
 - Config via env vars or YAML — never hardcoded
 - `snake_case` for everything
 - Early returns for validation failures
+- **Prefer clarity and readability** over cleverness in all code
+- Organize pipelines into **folders and subfolders** by domain — avoid many files under the same directory
 
 ## Dev Commands
 
