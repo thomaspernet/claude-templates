@@ -42,7 +42,7 @@ where = ["src"]
 include = ["claude_templates*"]
 
 [tool.setuptools.package-data]
-claude_templates = ["_templates/**/*", "_templates/**/.*", "_templates/**/.claude/**/*"]
+claude_templates = ["_templates/**/*", "_templates/**/.*", "_templates/**/.claude/**/*", "_modules/**/*", "_modules/**/.*", "_modules/**/.claude/**/*"]
 
 [tool.ruff]
 line-length = 100
