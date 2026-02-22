@@ -42,6 +42,17 @@ claude-templates add pydantic ./my-api
 claude-templates add security ./my-api
 ```
 
+### Documentation — Best-practice reference packs
+
+```bash
+claude-templates list-docs                    # List documentation packs
+claude-templates info-doc agents              # Show pack details
+claude-templates add-doc agents               # Add to current directory
+claude-templates add-doc agents ./my-project  # Add to specific directory
+```
+
+Documentation packs install general best practices and a project-specific scaffold into `documentation/`. The coding agent uses these as benchmarks when implementing features.
+
 ## Available Templates
 
 | Template | Description | Details |
@@ -76,6 +87,12 @@ claude-templates add security ./my-api
 | `logging-observability` | General Engineering | Structured logging, log levels, correlation IDs, tracing, metrics |
 | `security` | General Engineering | OWASP top 10, input validation, auth patterns, secrets management |
 
+## Available Documentation Packs
+
+| Pack       | Category             | Description                                                                      |
+|------------|----------------------|----------------------------------------------------------------------------------|
+| `agents`   | AI / LLM Engineering | Agent design best practices, tool patterns, chatbot architecture, memory systems |
+
 ## What Gets Installed
 
 **Templates** apply a full project scaffold:
@@ -90,6 +107,12 @@ claude-templates add security ./my-api
 
 - `.claude/rules/<module>.md` — Best practices and anti-patterns
 - `.claude/skills/<skill>/SKILL.md` — Workflow skills (some modules)
+
+**Documentation packs** add reference docs and project scaffolds:
+
+- `documentation/<topic>/general-best-practices/` — Pre-loaded industry best practices
+- `documentation/<topic>/project-specific/` — Scaffold for documenting your project's implementation
+- `.claude/rules/documentation-<topic>.md` — Rule telling the coding agent how to use and maintain the docs
 
 ## Development
 

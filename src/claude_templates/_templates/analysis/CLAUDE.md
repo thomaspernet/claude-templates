@@ -62,6 +62,25 @@ uv run ruff check          # Lint Python files
 - Notebooks validated by executing top-to-bottom with `jupyter nbconvert --execute`
 - Test edge cases: empty DataFrames, NaN values, type mismatches
 
+## Documentation — MANDATORY
+
+This project may contain a `documentation/` folder organized by topic (like chapters of a book). Each topic subfolder has two sections:
+
+```text
+documentation/
+  {topic}/
+    general-best-practices/   — Industry reference (READ-ONLY, never modify)
+    project-specific/          — This project's implementation (MUST stay in sync with code)
+```
+
+### Rules
+
+1. **Never modify `general-best-practices/`.** These are reference benchmarks shipped with the project.
+2. **Update `project-specific/` as part of every PR** that changes the topic area. If you add a pipeline, update the pipeline docs. If you change a data source, update the data docs. Documentation updates are not optional — the work is incomplete without them.
+3. **Read best practices before implementing.** Before building something new, read the relevant `general-best-practices/` doc and compare your design against it. Note intentional deviations in `project-specific/`.
+4. **Keep inventories current.** If a `project-specific/` doc has an inventory table (datasets, pipelines, notebooks, etc.), it must match the codebase. Update it before starting new work if it's stale.
+5. **Document decisions, not just code.** Explain *why* an architectural choice was made. Include dates for significant decisions.
+
 ## Workflow
 
 - Conventional commits: `fix:`, `feat:`, `refactor:`, `docs:`, `chore:`, `test:`

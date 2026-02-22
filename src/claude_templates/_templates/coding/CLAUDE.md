@@ -78,6 +78,25 @@ npm test                         # Tests
 - **Test naming**: `test_{function}_{scenario}_{expected}`
 - Frontend: Run `npm run build` — must pass with zero errors
 
+## Documentation — MANDATORY
+
+This project may contain a `documentation/` folder organized by topic (like chapters of a book). Each topic subfolder has two sections:
+
+```text
+documentation/
+  {topic}/
+    general-best-practices/   — Industry reference (READ-ONLY, never modify)
+    project-specific/          — This project's implementation (MUST stay in sync with code)
+```
+
+### Rules
+
+1. **Never modify `general-best-practices/`.** These are reference benchmarks shipped with the project.
+2. **Update `project-specific/` as part of every PR** that changes the topic area. If you add an agent, update the agent docs. If you change a pipeline, update the pipeline docs. Documentation updates are not optional — the work is incomplete without them.
+3. **Read best practices before implementing.** Before building something new, read the relevant `general-best-practices/` doc and compare your design against it. Note intentional deviations in `project-specific/`.
+4. **Keep inventories current.** If a `project-specific/` doc has an inventory table (agents, tools, pipelines, etc.), it must match the codebase. Update it before starting new work if it's stale.
+5. **Document decisions, not just code.** Explain *why* an architectural choice was made. Include dates for significant decisions.
+
 ## Development Workflow
 
 - Commit prefixes: `fix:`, `feat:`, `refactor:`, `docs:`, `chore:`, `test:`
