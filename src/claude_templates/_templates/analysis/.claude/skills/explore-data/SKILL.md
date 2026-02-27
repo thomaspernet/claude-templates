@@ -1,6 +1,6 @@
 ---
 name: explore-data
-description: "Systematic exploratory data analysis — shape, quality, distributions, correlations."
+description: "Use this skill at first contact with any new dataset. Invoke when the user mentions a new CSV, table, or dataset they haven't analyzed yet, or reports unexpected values, missing data, or wants to understand structure before writing code — even before a specific analysis question is asked."
 ---
 
 # Explore Data — Systematic EDA

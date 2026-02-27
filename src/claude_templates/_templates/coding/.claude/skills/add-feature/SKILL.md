@@ -1,6 +1,6 @@
 ---
 name: add-feature
-description: "Step-by-step DDD feature implementation across all four layers."
+description: "Use this skill when adding a new entity, endpoint, or business capability. Invoke when the user describes a new feature that needs domain models, a service layer, API routes, or database access — even if they haven't thought through all four layers yet."
 ---
 
 # Add Feature — DDD Implementation

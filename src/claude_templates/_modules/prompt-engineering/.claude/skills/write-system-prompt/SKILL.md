@@ -1,6 +1,6 @@
 ---
 name: write-system-prompt
-description: "Guided system prompt creation. Use when writing or improving a system prompt for an AI application."
+description: "Use this skill when writing, improving, or auditing a system prompt for any AI application. Invoke when the user mentions a system prompt, instruction layer, AI persona, or wants to configure how an LLM behaves — even if they don't say 'system prompt' explicitly."
 ---
 
 # Write System Prompt

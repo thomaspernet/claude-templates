@@ -1,6 +1,6 @@
 ---
 name: write-document
-description: "Guided document creation from purpose definition through outline, draft, and final."
+description: "Use this skill when creating any structured document from scratch. Invoke when the user says 'write a document', 'draft a report', 'create a brief or memo', or wants to produce a long-form deliverable — even if they haven't defined the structure or audience yet."
 ---
 
 # Write Document

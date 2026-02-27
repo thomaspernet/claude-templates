@@ -1,6 +1,6 @@
 ---
 name: design-agent
-description: "Step-by-step agent creation workflow. Use when designing a new LLM-based agent."
+description: "Use this skill when designing or building a new LLM-based agent. Invoke when the user mentions building an AI agent, choosing between a processing agent and a chatbot, designing tools for an LLM, or structuring system instructions — even if they haven't settled on an architecture yet."
 ---
 
 # Design Agent

@@ -1,6 +1,6 @@
 ---
 name: write-tests
-description: "Guided test creation for a feature. Use when adding tests to new or existing functionality."
+description: "Use this skill when adding tests to new or existing code. Invoke when the user mentions writing tests, improving coverage, setting up a test suite, or asks how to test a function or feature — even if they haven't decided which test types are needed."
 ---
 
 # Write Tests

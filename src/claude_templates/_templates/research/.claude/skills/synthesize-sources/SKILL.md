@@ -1,6 +1,6 @@
 ---
 name: synthesize-sources
-description: "Cross-reference multiple source notes to produce a theme-organized synthesis document."
+description: "Use this skill after collecting notes on a topic and wanting to understand what they mean together. Invoke when the user has 3 or more source notes and wants a literature review, a synthesis, or to assess the weight of evidence — even if they don't use the word 'synthesis'."
 ---
 
 # Synthesize Sources

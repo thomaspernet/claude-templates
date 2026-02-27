@@ -1,6 +1,6 @@
 ---
 name: review-changes
-description: "Pre-commit code review covering architecture, quality, security, and correctness."
+description: "Use this skill before committing any change that touches more than one file. Invoke when the user says 'ready to commit', 'looks good?', or 'can you review this?', or after finishing a feature or refactor — even if they don't explicitly ask for a code review."
 ---
 
 # Review Changes

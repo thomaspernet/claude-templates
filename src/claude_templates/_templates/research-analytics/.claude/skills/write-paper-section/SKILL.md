@@ -1,6 +1,6 @@
 ---
 name: write-paper-section
-description: "Draft a paper section grounded in tables and figures from the repository."
+description: "Use this skill when drafting or updating a Methods or Results section backed by Athena queries and S3 data. Invoke when the user wants to write about findings, describe the data pipeline methodology, or translate tables and figures into academic prose — even if they just say 'write up the results' or 'draft the methods'."
 ---
 
 # Write Paper Section

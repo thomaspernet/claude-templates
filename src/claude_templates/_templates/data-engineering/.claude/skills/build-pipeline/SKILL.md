@@ -1,6 +1,6 @@
 ---
 name: build-pipeline
-description: "Step-by-step ETL pipeline construction: extract, transform, load, validate, test."
+description: "Use this skill when building a new data pipeline or ETL process. Invoke when the user describes ingesting data from a source, transforming records, loading to a warehouse or database, or scheduling a data job — even if they only describe the source and destination without calling it a pipeline."
 ---
 
 # Build Pipeline
