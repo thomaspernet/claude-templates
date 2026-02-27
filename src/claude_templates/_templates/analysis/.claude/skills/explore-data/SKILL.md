@@ -1,11 +1,32 @@
 ---
 name: explore-data
-description: "Systematic exploratory data analysis. Use when starting work with a new dataset."
+description: "Systematic exploratory data analysis — shape, quality, distributions, correlations."
 ---
 
 # Explore Data — Systematic EDA
 
-Perform a thorough exploration of the dataset. Follow each step.
+## When to Use
+
+**Perfect for:**
+- First contact with a new dataset
+- Diagnosing data quality issues before analysis
+- Understanding structure before writing processing code
+
+**Not ideal for:**
+- Re-running known analysis on familiar data
+- Building final figures or paper tables
+- Profiling performance of large datasets (use specialized tools instead)
+
+---
+
+> **Core Philosophy:** Describe what the data *is* before deciding what to do with it. Every assumption about structure, completeness, and quality must be verified, not guessed.
+
+## ⚠️ CRITICAL
+
+1. **Never modify files in `data-source/`.** Raw data is immutable. If cleaning is needed, it belongs in `data-processing/` — not here.
+2. **Explain patterns, not code.** The EDA output is a human-readable summary of findings, not a code walkthrough. Describe what you observe, not how you computed it.
+
+---
 
 ## Step 1: Overview
 
@@ -51,4 +72,25 @@ Save all figures to `reports/figures/eda/`.
 
 ## Output
 
-Produce a summary markdown document with findings, issues, and recommendations for next steps.
+Produce a markdown summary at `reports/eda-{dataset-name}.md`:
+
+```markdown
+# EDA: {Dataset Name}
+
+## Summary
+- Rows: X | Columns: Y | Memory: Z MB
+- Key issue: [most important finding]
+
+## Data Quality Issues
+| Column | Issue | Severity | Recommendation |
+|--------|-------|----------|----------------|
+
+## Distribution Notes
+[Notable skews, outliers, unexpected values]
+
+## Correlations
+[Pairs above 0.8 threshold, multicollinearity concerns]
+
+## Recommended Next Steps
+1. [Priority fix or investigation]
+```

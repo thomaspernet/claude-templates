@@ -1,11 +1,33 @@
 ---
 name: build-pipeline
-description: "Step-by-step ETL pipeline construction. Use when creating a new data pipeline."
+description: "Step-by-step ETL pipeline construction: extract, transform, load, validate, test."
 ---
 
 # Build Pipeline
 
-Follow these steps to create a new data pipeline.
+## When to Use
+
+**Perfect for:**
+- Building a new pipeline from a new data source
+- Creating a new ETL workflow between existing systems
+- Adding a new data flow to an existing pipeline module
+
+**Not ideal for:**
+- One-off data migrations (use a script, not a pipeline module)
+- Ad-hoc queries or exploratory data pulls
+- Schema-only changes or migrations (those belong in `models/`)
+
+---
+
+> **Core Philosophy:** A pipeline that cannot be re-run safely without side effects is broken by design. Idempotency is not a feature — it is the baseline requirement.
+
+## ⚠️ CRITICAL
+
+1. **Every load step MUST use UPSERT or MERGE, never INSERT.** A pipeline that uses INSERT will silently duplicate data on re-run. There are no exceptions to this rule.
+2. **Schema validation on both ends.** Validate input schema before processing (fail fast on bad data). Validate output schema before writing (never write garbage to the target).
+3. **Never hardcode connection strings.** All connection parameters come from env vars or config files. A hardcoded credential in pipeline code is a security incident.
+
+---
 
 ## Step 1: Define Schema
 
@@ -52,12 +74,25 @@ Follow these steps to create a new data pipeline.
 - Integration test with test database
 - Edge case tests (empty input, all nulls, duplicates)
 
+## Output
+
+Report the created files and confirm idempotency:
+
+```
+pipelines/{name}.py                          # Main module (extract/transform/load)
+tests/unit/test_{name}.py                    # Transform unit tests
+tests/integration/test_{name}_integration.py
+```
+
+Confirm: pipeline re-runs from scratch with no duplicate data.
+
 ## Checklist
 
-- [ ] Extract pulls data correctly
-- [ ] Transform logic is pure and tested
-- [ ] Load uses upserts (idempotent)
+- [ ] Extract pulls data correctly with filters
+- [ ] Transform is a pure function, fully tested
+- [ ] Load uses UPSERT/MERGE (idempotent)
 - [ ] Schema validated on input and output
-- [ ] Logging at every step
+- [ ] No hardcoded connection strings
+- [ ] Structured logging at every step
 - [ ] Tests written and passing
-- [ ] Pipeline is re-runnable safely
+- [ ] Pipeline re-runs safely from scratch
