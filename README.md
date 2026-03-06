@@ -82,6 +82,8 @@ Documentation packs install general best practices and a project-specific scaffo
 | `docker` | DevOps / Infrastructure | Dockerfile best practices, multi-stage builds, compose, health checks |
 | `ci-cd` | DevOps / Infrastructure | GitHub Actions patterns, test/lint/deploy stages, secrets handling |
 | `git-workflow` | DevOps / Infrastructure | Branching strategy, PR conventions, conventional commits, code review |
+| `econ-research-paper` | Academic / Research | Economics paper structure, WHAT/WHY/HOW introduction, identification strategy, robustness checks |
+| `econ-peer-review` | Academic / Research | Peer review structure, evaluation checklists, econometric design assessment, tone and ethics |
 | `testing-strategy` | General Engineering | Test pyramid, mocking strategy, fixture patterns, TDD workflow |
 | `api-design` | General Engineering | REST conventions, versioning, pagination, error responses, OpenAPI |
 | `logging-observability` | General Engineering | Structured logging, log levels, correlation IDs, tracing, metrics |
@@ -92,6 +94,8 @@ Documentation packs install general best practices and a project-specific scaffo
 | Pack       | Category             | Description                                                                      |
 |------------|----------------------|----------------------------------------------------------------------------------|
 | `agents`   | AI / LLM Engineering | Agent design best practices, tool patterns, chatbot architecture, memory systems |
+| `econ-research-paper` | Academic / Research | Economics research methodology, paper structure, identification strategy, tables and results |
+| `econ-peer-review` | Academic / Research | Peer review methodology, econometric design evaluation, tone and ethics, evaluation checklists |
 
 ## What Gets Installed
 
