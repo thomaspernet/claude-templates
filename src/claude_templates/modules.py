@@ -91,6 +91,14 @@ MODULES: dict[str, dict] = {
         ),
         "has_skill": True,
     },
+    "econ-peer-review": {
+        "category": "Academic / Research",
+        "description": (
+            "Peer review structure, evaluation checklists, "
+            "econometric design assessment, tone and ethics"
+        ),
+        "has_skill": True,
+    },
     # General Engineering
     "testing-strategy": {
         "category": "General Engineering",

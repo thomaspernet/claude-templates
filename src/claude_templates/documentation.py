@@ -35,6 +35,21 @@ DOCUMENTATION: dict[str, dict] = {
             "data sources, empirical strategy, and revision log."
         ),
     },
+    "econ-peer-review": {
+        "category": "Academic / Research",
+        "description": (
+            "Peer review methodology, econometric design evaluation, "
+            "tone and ethics, section-by-section checklists"
+        ),
+        "details": (
+            "Pre-loaded best practices for conducting peer reviews of "
+            "economics papers: review structure and timeline, evaluating "
+            "DiD/IV/RDD/Poisson designs, tone and ethics guidelines, "
+            "section-by-section evaluation checklists. Includes a "
+            "project-specific scaffold for tracking referee comments, "
+            "revision priorities, and response letters."
+        ),
+    },
 }
 
 
