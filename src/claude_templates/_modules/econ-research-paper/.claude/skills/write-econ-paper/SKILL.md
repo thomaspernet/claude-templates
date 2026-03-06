@@ -1,6 +1,6 @@
 ---
 name: write-econ-paper
-description: "Use this skill when writing, structuring, or improving an empirical economics research paper. Invoke when the user mentions a research paper, thesis, working paper, introduction, literature review, empirical strategy, robustness checks, or JEL codes — even if they only say 'write the intro' or 'draft the results section'."
+description: "Use this skill when writing, structuring, or improving an empirical economics research paper. Invoke when the user mentions a research paper, thesis, working paper, introduction, literature review, empirical strategy, robustness checks, heterogeneity, mechanisms, or JEL codes — even if they only say 'write the intro' or 'draft the results section'."
 ---
 
 # Write Economics Research Paper
@@ -10,8 +10,8 @@ description: "Use this skill when writing, structuring, or improving an empirica
 **Perfect for:**
 - Writing or restructuring any section of an empirical economics paper
 - Drafting a research proposal or thesis introduction
-- Reviewing whether a paper follows standard economics conventions
-- Building the WHAT/WHY/HOW framework for an introduction
+- Reviewing whether a paper follows top-tier journal conventions (AER, QJE, JDE, JIE, RESTUD)
+- Building the introduction framework for an applied micro paper
 
 **Not ideal for:**
 - Theoretical or purely mathematical economics papers
@@ -20,13 +20,17 @@ description: "Use this skill when writing, structuring, or improving an empirica
 
 ---
 
-> **Core Philosophy:** A good economics paper answers a question whose answer is not obvious, whose answer is consequential, and whose empirical strategy convincingly addresses endogeneity. Structure and clarity are not cosmetic — they determine whether the paper gets read past the first page.
+> **Core Philosophy:** One paper, one idea. Every sentence must earn its place. Write for the referee — busy, skeptical, reading dozens of papers. The introduction is 60% of whether the paper gets read. Never claim more than the data supports.
 
 ## CRITICAL
 
-1. **Every introduction must answer WHAT/WHY/HOW.** WHAT 1 (research question), WHY 1 (consequential), WHY 2 (not obvious), WHAT 2 (contribution), HOW 1 (data), HOW 2 (empirical strategy), WHAT 3 (findings). Missing any of these makes the introduction incomplete.
-2. **Economic magnitude over statistical significance.** Never report a result as "significant" without discussing its real-world magnitude. In large datasets, trivially small effects are statistically significant.
-3. **Tables must stand alone.** A reader must understand a table without reading the text, and vice versa. Every table needs clear headers, variable definitions, sample descriptions, and notes.
+1. **The introduction must open with the question, not background.** State what the paper does in the first or second sentence. Do not open with broad context ("Climate change is one of the greatest challenges..."). Lead with the economic question and why it matters.
+2. **Report economic magnitude, never just significance.** "An 18.6 percent increase in patenting" is informative; "significant at the 5 percent level" is not. Never report p-values in running text — significance stars belong in tables only. Use ATT followed by standard error: "The ATT is 18.6 percent (s.e. = 0.085)."
+3. **Heterogeneity is not mechanisms.** Heterogeneity shows *who* responds (descriptive). Mechanisms show *why* the effect exists (the theoretical channel). These are separate sections. State explicitly: "These splits are descriptive and identify correlates of the response, not causal mechanisms."
+
+---
+
+**Note on flexibility:** The structure below is a guide for applied micro papers targeting top journals. Some papers need to deviate — theory-heavy papers may merge the empirical strategy into the model section, development papers may need longer institutional context, etc. Adapt the structure to serve the paper's argument, not the other way around.
 
 ---
 
@@ -34,94 +38,137 @@ description: "Use this skill when writing, structuring, or improving an empirica
 
 Before writing anything, verify the question passes both tests:
 
-- **"Why isn't the answer obvious?"**
-  - If estimating impact of A on B: identify endogeneity problems (reverse causality, omitted variables, selection bias)
-  - If testing a theory: present competing theories that predict opposite signs
-- **"Why should I care?"**
-  - What policy recommendations would follow from each possible answer?
-  - Would a non-economist understand why this matters?
+- **"Why isn't the answer obvious?"** — Multiple outcomes must be plausible. If you're hoping for a specific result, the question isn't interesting.
+- **"Why should I care?"** — The answer must be consequential for economics, not just for the specific field.
 
-If either test fails, refine the question before proceeding.
+One paper, one question. If you're trying to answer more than one, split it.
 
-## Step 2: Write the Title Page
+## Step 2: Title and Abstract
 
-1. **Title** — Present the research question in an eye-catching way. Good titles often use a question or a surprising juxtaposition.
-2. **Abstract** — 100-150 words. Write AFTER the conclusion and introduction. Communicate the main result in a way that convinces readers to continue.
-3. **Keywords** — No more than 2 lines.
-4. **JEL codes** — Use the AEA classification system. Include codes for the methodology (e.g., C36 for IV) and the field (e.g., I21 for education).
+**Title:** Short, specific, informative. The reader should know the topic, setting, and type of evidence from the title alone.
+- Good pattern: "[Mechanism/Effect]: [Evidence Type] from [Setting]"
+- Avoid question marks, puns, and vague framing ("Essays on...", "Towards a...")
 
-## Step 3: Write the Introduction (Most Important Section)
+**Abstract:** 150 words maximum (some journals allow 200).
+1. Question
+2. Setting and method in one sentence
+3. Main result **with a number** (point estimate + SE)
+4. Mechanism or heterogeneity
+5. Implication
 
-Structure the introduction to answer all seven questions:
+No citations. No filler ("This paper contributes to the literature..."). Start with what the paper does.
 
-1. **Contextualization** (1 paragraph) — Real-world context with statistics, examples, or anecdotes. Ground the paper in reality.
-2. **WHAT 1** — State the objective of the paper.
-3. **WHY 1** — Explain why the answer is consequential.
-4. **WHY 2** — Explain why the answer is not obvious (endogeneity, heterogeneity, competing theories).
-5. **WHAT 2** — State the contribution to the literature.
-6. **HOW 1** — Present the data.
-7. **HOW 2** — Present the empirical strategy and why it solves endogeneity.
-8. **WHAT 3** — Present the results (include economic magnitude).
-9. **Roadmap** — Final paragraph outlining the paper's structure.
+## Step 3: Write the Introduction
+
+The introduction is 60% of whether the paper gets read. Structure it paragraph by paragraph:
+
+| Paragraph | Content |
+|-----------|---------|
+| **1. Question + why it matters** | Open with the economic question. State what the paper does. Convey why this matters for economics broadly. |
+| **2. Setting and context** | Why this setting is well-suited. Describe the identifying variation informally but precisely. |
+| **3. Ex ante ambiguity** | Theoretical tension — why is the sign unclear? Signals the paper isn't confirming a foregone conclusion. |
+| **4. Data and identification** | One paragraph: dataset, key variables, estimation strategy. Enough for the referee to assess credibility. |
+| **5. Results** | Main findings **with numbers** (point estimates + SE). Heterogeneity and mechanisms briefly. This is where the referee decides if the paper is interesting. |
+| **6. Contributions** | Three maximum, numbered. Each references the specific literature it advances. Be precise: "first firm-level causal estimate of X" > "contributes to the literature on X." |
+| **7. Roadmap** (optional) | If included, make it substantive. "Section 2 establishes the aggregate patenting response" > "Section 2 reviews the literature." If it adds nothing beyond section titles, delete it. |
+
+**Pitfalls:**
+- Do not open with a broad statement about the state of the world
+- Do not announce what the paper does before explaining why it matters
+- Do not duplicate the abstract
+- Do not leave contributions implicit — the referee uses this paragraph to evaluate novelty
 
 Upper limit: 5 pages. A non-specialist should understand every point.
 
-## Step 4: Write the Related Literature
+## Step 4: Literature Review
 
-- Decompose into max 3 strands.
-- Only cite papers closely linked to your question.
-- Use your own words — no copy-pasted abstracts.
-- Frame positively: "We complement these approaches in several ways. First..."
-- Never say: "The deficiency of X's approach" or "These papers suffer from."
-- You may elaborate on WHY 2 here (why the answer is not obvious).
+**Length:** 1-1.5 pages for top journals (AER/QJE fold it into the intro). A 5-page lit review signals a working paper, not a journal submission.
 
-## Step 5: Write the Data Section
+**Structure by channel/mechanism, not paper by paper:**
+- Bad: "Smith (2020) finds X. Jones (2021) finds Y."
+- Good: "Three mechanisms link disasters to innovation. On the disruptive side, [citations]. On the adaptive side, [citations]."
 
-- One subsection per set of variables: dependent variable, explanatory variable, instrument (if applicable), controls.
-- Justify data source choice when alternatives exist.
-- Include descriptive statistics table: N, mean, SD, min, max.
-- Comment on the descriptive statistics — don't just present the table.
+**The gap paragraph (mandatory):** End with: (a) what prior work established, (b) what remains unknown, (c) how this paper fills the gap. The gap statement must mirror the contributions in the introduction.
 
-## Step 6: Write the Empirical Strategy
+**What to cut:** Macro cross-country evidence irrelevant to your identification. Papers already discussed in the intro. Papers topically related but methodologically distant.
 
-- Describe the strategy in detail.
-- Convince the reader it solves endogeneity problems.
-- If using IV: explain why the instrument is valid (affects Y only through X).
-- Use visual arguments: scatterplots of instrument vs. endogenous variable.
-- Write regression equations clearly with precise variable definitions.
+**Do not use AI chat tools to draft the lit review.** They produce paper-by-paper catalogs, not integrated arguments. The lit review must be written with the full paper in mind so every citation connects to your identification and contribution.
 
-## Step 7: Write the Results
+## Step 5: Data
 
-- Present regression tables that are **self-explanatory**.
-- Derive main results clearly from the tables.
-- Focus on economic magnitude, not just stars.
-- Put magnitude in perspective (e.g., "equivalent to X% of a standard deviation" or "comparable to the effect of Y").
+- One paragraph per data source: provider, coverage (years, geography, unit), key variables
+- Explain merging procedures and identifiers for reproducibility
+- Report sample restrictions with justification for each dropped observation
+- Summary statistics table: means, SD, min, median, max — paneled by variable type
+- Discuss summary statistics in text — flag unusual patterns (skewness, zeros, outliers)
+- Define the treatment variable precisely. If constructed (geocoding, matching, thresholds), explain step by step
+- Report treated vs. control counts and how treatment varies over time
 
-## Step 8: Write Robustness Checks
+## Step 6: Empirical Strategy
 
-- First priority: identify alternative stories (competing channels) and show findings survive.
-- Second priority: sensitivity to alternative measures of dependent variable, explanatory variable, instrument.
-- Test sensitivity to outlier removal.
-- Present in tables with the same format as main results.
+- State the identifying assumption **in plain language** before writing equations
+- Explain why the assumption is credible in this specific setting
+- Present the estimating equation with every term defined
+- Justify the estimator choice. If using staggered DiD, acknowledge the TWFE bias literature and cite the methodological papers
+- Specify clustering level and justify it
+- For DiD: show event-study plot with pre-treatment coefficients. Report the coefficients and SEs explicitly — don't just say "no evidence of pre-trends"
+- Report the preferred specification without controls as the benchmark. Add controls as robustness to assess stability
+- If controls are post-treatment, acknowledge this explicitly
 
-## Step 9: Write the Conclusion
+## Step 7: Results
 
-- Max 3 pages.
-- Summarize the contribution.
-- Emphasize policy implications.
-- Point to avenues for future research (opportunity to acknowledge limitations without being overly negative).
+- Lead with the main estimate. Report ATT with standard error in parentheses
+- Never report p-values in running text. Stars belong in tables only
+- Interpret economic magnitude: "An 18.6 percent increase in patenting" not "significant at the 5 percent level"
+- Show the event-study figure alongside the table
+- Point estimates in percent when using Poisson or log specifications
 
-## Step 10: Final Polish
+## Step 8: Robustness
 
-- Check all references are complete, alphabetical, consistently formatted.
-- Verify every number in the text matches the tables.
-- Remove all intensifiers ("very", "extremely", "highly").
-- Ensure each paragraph contains one idea and is shorter than half a page.
-- Re-read the introduction — does it answer all 7 questions?
+- Alternative estimators (stacked DiD, alternative clustering, Conley SEs)
+- Sensitivity to sample restrictions (dropping outliers, varying treatment definitions)
+- Placebo tests if applicable
+- Do not oversell. If an alternative specification gives different results, discuss honestly
+
+## Step 9: Heterogeneity
+
+- Split on **predetermined** variables (measured before treatment). Never split on post-treatment outcomes
+- State explicitly: "These splits are descriptive and identify correlates of the response, not causal mechanisms"
+- Report ATTs for each subgroup with standard errors
+- Discuss the economic logic for each split before showing results
+- Connect to the mechanisms section that follows
+
+## Step 10: Mechanisms
+
+- Mechanisms show **why** the effect exists — the theoretical channel
+- State the hypothesis before the test
+- Explain how you operationalize (proxy variable, sample split, interaction)
+- Report results and interpret in terms of the theoretical channel
+- Discuss which mechanisms do *not* work — null results are informative
+
+## Step 11: Conclusion
+
+- **1-1.5 pages maximum.** Shorter is better — this should be the shortest section.
+1. Restate the main finding in one sentence
+2. Summarize the key heterogeneity/mechanism result
+3. Policy implication (one paragraph, concrete)
+4. Limitations honestly (sample, identification, external validity)
+5. Future work briefly (one or two sentences, not a research agenda)
+
+Do not repeat the introduction verbatim. Do not overclaim external validity. Do not introduce new results.
+
+## Step 12: Final Polish
+
+- Every number in text matches the tables
+- All references complete, alphabetical, consistent style
+- Every citation in text appears in references and vice versa
+- Compile and proofread the PDF — broken cross-references signal carelessness
+- Have someone outside your field read the introduction. If they cannot state the question, finding, and contribution, rewrite it
+- Write the introduction last (or rewrite it last) — it should promise exactly what the paper delivers
 
 ## Output
 
-Deliver the section in academic prose, ready for inclusion in the paper:
+Deliver the section in academic prose, ready for inclusion:
 
 ```markdown
 ## {Section Title}
@@ -129,48 +176,64 @@ Deliver the section in academic prose, ready for inclusion in the paper:
 {Content following the conventions above}
 ```
 
-When delivering a full paper structure, provide the outline:
+When delivering a full paper outline:
 
 ```
-1. Title page
-   - Title: {title}
-   - Abstract: {100-150 words}
-   - Keywords: {keywords}
-   - JEL: {codes with descriptions}
+1. Title: {title}
+   Abstract: {150 words with headline estimate}
+   Keywords / JEL: {codes}
 
 2. Introduction
-   - Contextualization: {topic}
-   - WHAT 1: {research question}
-   - WHY 1: {why consequential}
-   - WHY 2: {why not obvious}
-   - WHAT 2: {contribution}
-   - HOW 1: {data}
-   - HOW 2: {empirical strategy}
-   - WHAT 3: {key findings}
+   P1: Question + why it matters
+   P2: Setting and identifying variation
+   P3: Ex ante ambiguity
+   P4: Data and identification (brief)
+   P5: Results with numbers
+   P6: Contributions (max 3, numbered)
+   P7: Roadmap (optional, substantive)
 
-3. Related Literature ({n} strands)
-4. Data ({n} variable sets)
+3. Literature ({n} strands, organized by channel)
+   Gap paragraph: {what's known} → {what's missing} → {how this paper fills it}
+
+4. Data ({n} sources)
+   Summary statistics table
+   Treatment definition and variation
+
 5. Empirical Strategy
+   Identifying assumption (plain language)
+   Estimating equation
+   Pre-trends / event study
+
 6. Results
-7. Robustness Checks
-8. Conclusion
-9. References
+   Main estimate: ATT = {X}% (s.e. = {Y})
+   Event-study figure
+
+7. Robustness
+8. Heterogeneity (descriptive, predetermined splits)
+9. Mechanisms (theoretical channels)
+10. Conclusion (1-1.5 pages)
+11. References
 ```
 
 ## Checklist
 
-- [ ] Research question passes "Why not obvious?" and "Why should I care?" tests
-- [ ] Introduction answers all 7 questions (WHAT 1-3, WHY 1-2, HOW 1-2)
-- [ ] Introduction starts with real-world contextualization
-- [ ] Introduction ends with roadmap
-- [ ] Introduction is under 5 pages
-- [ ] Literature review uses max 3 strands, no negative framing
-- [ ] Data section has one subsection per variable set with descriptive statistics
-- [ ] Empirical strategy explicitly addresses endogeneity
-- [ ] Tables are self-explanatory (standalone from text)
-- [ ] Results discuss economic magnitude, not just statistical significance
-- [ ] Robustness checks address alternative stories first
-- [ ] Conclusion is under 3 pages with policy implications
-- [ ] References are alphabetical and consistently formatted
-- [ ] Paper is under 40 pages total
-- [ ] No vague intensifiers, all sentences have subject-verb-object
+- [ ] One paper, one question — not trying to answer multiple things
+- [ ] Research question passes "Why not obvious?" and "Why should I care?"
+- [ ] Title is short, specific, informative (no puns or question marks)
+- [ ] Abstract under 150 words with headline estimate and SE
+- [ ] Introduction opens with the question, not broad context
+- [ ] Introduction reports results with numbers (point estimates + SE)
+- [ ] Contributions are numbered, precise, and reference specific literatures
+- [ ] Lit review organized by channel, not paper by paper
+- [ ] Lit review ends with a gap paragraph mirroring the contributions
+- [ ] Data section justifies every sample restriction
+- [ ] Empirical strategy states identifying assumption in plain language
+- [ ] Event-study / pre-trends reported with coefficients and SEs
+- [ ] Results lead with ATT + SE, no p-values in running text
+- [ ] Economic magnitude interpreted, not just statistical significance
+- [ ] Tables are self-explanatory with full notes
+- [ ] Heterogeneity clearly labeled as descriptive, splits on predetermined variables
+- [ ] Mechanisms distinguished from heterogeneity with theoretical hypotheses
+- [ ] Conclusion under 1.5 pages, no new results, no overclaiming
+- [ ] Paper under 40 pages total (30 for JDE-style journals)
+- [ ] No hedging, no intensifiers, no informal connectives, active voice

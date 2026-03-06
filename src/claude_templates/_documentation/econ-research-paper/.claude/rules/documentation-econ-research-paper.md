@@ -36,6 +36,7 @@ Before writing any section, read the relevant doc in `general-best-practices/`:
 | Write any section | `02-writing-a-research-paper.md` — structure, WHAT/WHY/HOW, writing tips |
 | Design empirical strategy | `03-identification-and-empirical-strategy.md` — IV, DiD, RD, pitfalls |
 | Create tables/figures | `04-tables-figures-and-presentation.md` — self-explanatory principle, magnitude |
+| Write heterogeneity/mechanisms | `05-heterogeneity-and-mechanisms.md` — splits, channels, reporting |
 
 ### 4. Keep the research design current
 

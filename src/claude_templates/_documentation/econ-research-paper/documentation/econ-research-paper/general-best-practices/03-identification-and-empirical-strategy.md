@@ -1,6 +1,6 @@
 # Identification and Empirical Strategy
 
-> Distilled from Valfort (2014), Research Methodology courses, Pantheon-Sorbonne University.
+> Sources: Valfort (2014), Pantheon-Sorbonne; conventions from AER, QJE, JDE, JIE, RESTUD.
 
 ## Why Identification Matters
 
@@ -25,8 +25,10 @@ Your empirical strategy section must:
 
 - Requires a treatment and control group observed before and after an intervention
 - Key assumption: **parallel trends** — absent treatment, both groups would have followed the same trajectory
-- Present pre-treatment trends visually
+- Present pre-treatment trends visually with event-study plot
+- Report pre-trend coefficients and SEs explicitly — don't just say "no evidence of pre-trends"
 - Discuss threats: anticipation effects, composition changes, spillovers
+- **Staggered adoption:** If treatment rolls out at different times, standard TWFE is biased. Use robust estimators (Callaway & Sant'Anna, Sun & Abraham, Borusyak et al.) and cite the methodological literature
 
 ### Regression Discontinuity (RD)
 
@@ -64,6 +66,9 @@ Your empirical strategy section must:
 - Define every variable
 - Explain what each coefficient captures
 - Use visual arguments (scatterplots, pre-trends, discontinuity plots)
+- Specify clustering level and justify it
+- Report the preferred specification without controls as benchmark. Add controls as robustness to assess stability, not to improve precision
+- If controls are post-treatment ("bad controls"), acknowledge explicitly
 - Discuss remaining threats to identification honestly
 
 ## Visual Arguments
@@ -84,3 +89,5 @@ Scatterplots and graphs are powerful tools to build credibility:
 3. **Cherry-picking specifications.** Present your main specification and explain why it's preferred. Put alternatives in robustness checks.
 4. **Ignoring alternative stories.** If your instrument could affect Y through a channel other than X, you must address it — either argue against it or control for it.
 5. **Over-controlling.** Including "bad controls" (variables affected by the treatment) biases your estimates. Only control for pre-treatment characteristics.
+6. **Staggered TWFE without acknowledgment.** Using standard two-way fixed effects when treatment rolls out at different times without citing or addressing the recent bias literature (Goodman-Bacon, de Chaisemartin & D'Haultfoeuille, etc.) is a red flag for referees.
+7. **Reporting only the controlled specification.** Show the unconditional estimate as the benchmark. If adding controls changes the result dramatically, that is informative and should be discussed.

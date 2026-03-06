@@ -1,6 +1,6 @@
 # Tables, Figures, and Results Presentation
 
-> Distilled from Valfort (2014), Research Methodology courses, Pantheon-Sorbonne University.
+> Sources: Valfort (2014), Pantheon-Sorbonne; conventions from AER, QJE, JDE, JIE, RESTUD.
 
 ## The Self-Explanatory Principle
 
@@ -44,11 +44,18 @@ Statistical significance alone is insufficient. Always discuss the **economic ma
 
 > "Especially in large panel data sets even the tiniest of effects is 'statistically significant.'" — Cochrane (2005)
 
+### Reporting Conventions
+
+- Report ATT followed by standard error: "The ATT is 18.6 percent (s.e. = 0.085)"
+- **Never report p-values in running text.** Significance stars belong in tables only
+- Never write: "statistically significant at the X percent level"
+- Point estimates in percent when using Poisson or log specifications: "18.6 percent" not "0.186"
+
 ### Writing About Results
 
+- Lead with the main estimate. The first result sentence should contain a number.
 - Derive main results clearly from the regression tables
 - Refer to specific table numbers and columns: "Column (3) of Table 4 shows that..."
-- Report exact coefficient values and significance levels
 - Compare magnitudes across specifications to show robustness
 - Discuss unexpected findings — don't hide them
 
@@ -82,13 +89,21 @@ Use scatterplots to document key correlations:
 - Pre-treatment trends for DiD designs
 - Regression discontinuity plots
 
-### Best Practices
+### Event-Study Plots
+
+- Include confidence intervals
+- Mark the omitted period clearly
+- Label axes with variable names and units
+- Show pre-treatment coefficients — these are your evidence for parallel trends
+
+### General Figure Practices
 
 - Label axes clearly with variable names and units
 - Include fitted lines where appropriate
 - Add confidence intervals when possible
-- Title should describe what the figure shows
+- Every figure should have a self-contained note explaining what is shown
 - Reference each figure in the text: "As Figure 1 shows..."
+- Maps: include legend, scale, labeled reference cities
 
 ## Robustness Tables
 
@@ -115,3 +130,5 @@ Priority order:
 4. **Inconsistent formatting** — Use the same format across all tables
 5. **Figures without labels** — Every axis, every line must be labeled
 6. **Results not referenced in text** — Every table and figure must be explicitly discussed
+7. **p-values in running text** — Report ATT + SE; stars belong in tables only
+8. **Orphaned exhibits** — Number consecutively; refer to every table and figure in the text
