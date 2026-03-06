@@ -82,6 +82,15 @@ MODULES: dict[str, dict] = {
         "description": "Branching strategy, PR conventions, conventional commits, code review",
         "has_skill": False,
     },
+    # Academic / Research
+    "econ-research-paper": {
+        "category": "Academic / Research",
+        "description": (
+            "Economics paper structure, WHAT/WHY/HOW introduction, "
+            "identification strategy, robustness checks"
+        ),
+        "has_skill": True,
+    },
     # General Engineering
     "testing-strategy": {
         "category": "General Engineering",

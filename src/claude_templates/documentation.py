@@ -19,6 +19,22 @@ DOCUMENTATION: dict[str, dict] = {
             "your own agent architecture, tool catalog, and implementation patterns."
         ),
     },
+    "econ-research-paper": {
+        "category": "Academic / Research",
+        "description": (
+            "Economics research methodology, paper structure, "
+            "identification strategy, tables and results presentation"
+        ),
+        "details": (
+            "Pre-loaded general best practices for writing empirical economics papers: "
+            "defining a research project (skeptic tests, contribution, feasibility), "
+            "writing a paper (WHAT/WHY/HOW introduction, section-by-section guide, writing tips), "
+            "identification and empirical strategy (IV, DiD, RD, RCT), "
+            "tables, figures, and results presentation. "
+            "Includes a project-specific scaffold for documenting your research design, "
+            "data sources, empirical strategy, and revision log."
+        ),
+    },
 }
 
 
