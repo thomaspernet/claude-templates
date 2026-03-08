@@ -39,6 +39,14 @@ TEMPLATES: dict[str, dict] = {
             "Includes BUGS.md and MISTAKES.md tracking."
         ),
     },
+    "light-data": {
+        "description": "Lightweight data projects (LadybugDB graph + DuckDB analytics, embedded)",
+        "details": (
+            "Dual embedded engine setup: LadybugDB for graph relationships and traversals, "
+            "DuckDB for analytical SQL and file scanning. Data interop via Arrow and Parquet. "
+            "Includes data conventions rules, load-data command, and explore-graph skill."
+        ),
+    },
     "writing": {
         "description": "Documentation, articles, style guides, editing workflows",
         "details": (

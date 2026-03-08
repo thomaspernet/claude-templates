@@ -24,6 +24,14 @@ MODULES: dict[str, dict] = {
         "description": "Cypher query patterns, MERGE vs CREATE, indexing, parameterized queries",
         "has_skill": False,
     },
+    "ladybugdb": {
+        "category": "Databases",
+        "description": (
+            "LadybugDB embedded graph: schema design, Cypher patterns, "
+            "bulk loading, DuckDB interop, graph algorithms"
+        ),
+        "has_skill": False,
+    },
     "sql-postgres": {
         "category": "Databases",
         "description": "SQL style, CTEs, window functions, indexing, migrations, connection pooling",

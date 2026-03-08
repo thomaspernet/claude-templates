@@ -61,6 +61,7 @@ Documentation packs install general best practices and a project-specific scaffo
 | `analysis` | Data analysis (pandas, polars, notebooks, provenance tracking) | Three-stage workflow (data-source → data-processing → data-analysis), provenance tracking, process-over-code explanations, EDA skills, paper section drafting |
 | `research` | Literature review, knowledge synthesis, academic writing | Source evaluation rules, citation management, academic writing conventions, literature search commands, WebFetch permissions |
 | `data-engineering` | ETL pipelines, databases, data quality, orchestration | Pipeline idempotency rules, database conventions, validation workflows, pipeline building skills, BUGS.md and MISTAKES.md tracking |
+| `light-data` | Lightweight data projects (LadybugDB graph + DuckDB analytics, embedded) | Dual embedded engine setup, data conventions rules, load-data command, explore-graph skill, Arrow/Parquet interop |
 | `writing` | Documentation, articles, style guides, editing workflows | Style guide rules, review process workflows, draft review commands, document writing skills |
 | `research-analytics` | Academic research with data pipelines (AWS Athena, paper tables/figures) | Three-stage workflow (data-source → data-processing → data-analysis), provenance tracking, paper section drafting, explain-table command |
 
@@ -71,6 +72,7 @@ Documentation packs install general best practices and a project-specific scaffo
 | `agent-design` | AI / LLM Engineering | Agent architecture, tool design, instruction builders, anti-patterns |
 | `prompt-engineering` | AI / LLM Engineering | System prompt structure, instruction/rule/skill layers, testing prompts |
 | `cypher-neo4j` | Databases | Cypher query patterns, MERGE vs CREATE, indexing, parameterized queries |
+| `ladybugdb` | Databases | LadybugDB embedded graph: schema design, Cypher patterns, bulk loading, DuckDB interop, graph algorithms |
 | `sql-postgres` | Databases | SQL style, CTEs, window functions, indexing, migrations, connection pooling |
 | `data-modeling` | Databases | Schema design, normalization, graph modeling, naming conventions |
 | `fastapi` | Python Patterns | Router organization, dependency injection, error handling, async endpoints |
@@ -94,6 +96,7 @@ Documentation packs install general best practices and a project-specific scaffo
 | Pack       | Category             | Description                                                                      |
 |------------|----------------------|----------------------------------------------------------------------------------|
 | `agents`   | AI / LLM Engineering | Agent design best practices, tool patterns, chatbot architecture, memory systems |
+| `ladybugdb-duckdb` | Databases | LadybugDB graph patterns, DuckDB analytical patterns, data interop via Arrow/Parquet, performance tuning |
 | `econ-research-paper` | Academic / Research | Economics research methodology, paper structure, identification strategy, tables and results |
 | `econ-peer-review` | Academic / Research | Peer review methodology, econometric design evaluation, tone and ethics, evaluation checklists |
 

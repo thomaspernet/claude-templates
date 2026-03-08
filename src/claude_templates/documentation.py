@@ -19,6 +19,21 @@ DOCUMENTATION: dict[str, dict] = {
             "your own agent architecture, tool catalog, and implementation patterns."
         ),
     },
+    "ladybugdb-duckdb": {
+        "category": "Databases",
+        "description": (
+            "LadybugDB graph patterns, DuckDB analytical patterns, "
+            "data interop via Arrow/Parquet, performance tuning"
+        ),
+        "details": (
+            "Pre-loaded best practices for lightweight embedded data projects: "
+            "LadybugDB graph modeling (schema, Cypher, traversals, algorithms), "
+            "DuckDB analytical queries (SQL, window functions, file scanning), "
+            "cross-engine data interop (Arrow, Parquet), and performance/scaling. "
+            "Includes a project-specific scaffold for documenting your graph schema, "
+            "analytical tables, data flow, and query patterns."
+        ),
+    },
     "econ-research-paper": {
         "category": "Academic / Research",
         "description": (
