@@ -47,6 +47,15 @@ TEMPLATES: dict[str, dict] = {
             "Includes data conventions rules, load-data command, and explore-graph skill."
         ),
     },
+    "presentation": {
+        "description": "PowerPoint presentations (slide design, storytelling, auto-review)",
+        "details": (
+            "Industry-standard slide design rules: action titles, one message per slide, "
+            "horizontal flow, 6×6 text limits, data visualization guidelines. Mandatory "
+            "self-review and auto-correction checklist. Includes build-deck skill and "
+            "review-deck command."
+        ),
+    },
     "writing": {
         "description": "Documentation, articles, style guides, editing workflows",
         "details": (

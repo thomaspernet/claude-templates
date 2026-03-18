@@ -107,6 +107,39 @@ MODULES: dict[str, dict] = {
         ),
         "has_skill": True,
     },
+    # Presentations
+    "presentation-academic": {
+        "category": "Presentations",
+        "description": (
+            "Academic conference slides: research question framing, "
+            "results tables, robustness checks, appendix strategy"
+        ),
+        "has_skill": True,
+    },
+    "presentation-consulting": {
+        "category": "Presentations",
+        "description": (
+            "Consulting-style decks: Pyramid Principle, SCR framework, "
+            "MECE structure, action titles, standalone document test"
+        ),
+        "has_skill": True,
+    },
+    "presentation-analysis": {
+        "category": "Presentations",
+        "description": (
+            "Data analysis presentations: insight-first narrative, "
+            "chart selection guide, callout annotations, declutter rules"
+        ),
+        "has_skill": True,
+    },
+    "presentation-finance": {
+        "category": "Presentations",
+        "description": (
+            "Finance and investor decks: pitch structure, financial tables, "
+            "projection assumptions, unit economics, scenario analysis"
+        ),
+        "has_skill": True,
+    },
     # General Engineering
     "testing-strategy": {
         "category": "General Engineering",

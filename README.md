@@ -62,6 +62,7 @@ Documentation packs install general best practices and a project-specific scaffo
 | `research` | Literature review, knowledge synthesis, academic writing | Source evaluation rules, citation management, academic writing conventions, literature search commands, WebFetch permissions |
 | `data-engineering` | ETL pipelines, databases, data quality, orchestration | Pipeline idempotency rules, database conventions, validation workflows, pipeline building skills, BUGS.md and MISTAKES.md tracking |
 | `light-data` | Lightweight data projects (LadybugDB graph + DuckDB analytics, embedded) | Dual embedded engine setup, data conventions rules, load-data command, explore-graph skill, Arrow/Parquet interop |
+| `presentation` | PowerPoint presentations (slide design, storytelling, auto-review) | Action titles, one message per slide, horizontal flow, 6×6 text limits, data viz guidelines, mandatory self-review/auto-correction, build-deck skill, review-deck command |
 | `writing` | Documentation, articles, style guides, editing workflows | Style guide rules, review process workflows, draft review commands, document writing skills |
 | `research-analytics` | Academic research with data pipelines (AWS Athena, paper tables/figures) | Three-stage workflow (data-source → data-processing → data-analysis), provenance tracking, paper section drafting, explain-table command |
 
@@ -86,6 +87,10 @@ Documentation packs install general best practices and a project-specific scaffo
 | `git-workflow` | DevOps / Infrastructure | Branching strategy, PR conventions, conventional commits, code review |
 | `econ-research-paper` | Academic / Research | Economics paper structure, WHAT/WHY/HOW introduction, identification strategy, robustness checks |
 | `econ-peer-review` | Academic / Research | Peer review structure, evaluation checklists, econometric design assessment, tone and ethics |
+| `presentation-academic` | Presentations | Academic conference slides: research question framing, results tables, robustness checks, appendix strategy |
+| `presentation-consulting` | Presentations | Consulting-style decks: Pyramid Principle, SCR framework, MECE structure, action titles, standalone document test |
+| `presentation-analysis` | Presentations | Data analysis presentations: insight-first narrative, chart selection guide, callout annotations, declutter rules |
+| `presentation-finance` | Presentations | Finance and investor decks: pitch structure, financial tables, projection assumptions, unit economics, scenario analysis |
 | `testing-strategy` | General Engineering | Test pyramid, mocking strategy, fixture patterns, TDD workflow |
 | `api-design` | General Engineering | REST conventions, versioning, pagination, error responses, OpenAPI |
 | `logging-observability` | General Engineering | Structured logging, log levels, correlation IDs, tracing, metrics |
