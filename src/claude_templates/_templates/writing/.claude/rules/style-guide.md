@@ -14,10 +14,13 @@ paths:
 
 ## Sentences
 
-- Average sentence length: 15-20 words
-- Maximum: 25 words — split longer sentences
 - One idea per sentence
-- Active voice preferred ("The team built X" not "X was built by the team")
+- Active voice preferred ("We find that..." not "It is found that...")
+- Avoid overly long sentences, break complex ideas into multiple sentences
+- Use hedging appropriately: "suggests" vs "proves"
+- Do NOT over-compress: conciseness means removing filler, not removing substance. Keep all substantive content, institutional context, and empirical details that help the reader understand the argument
+- Do NOT use em-dashes (---) in sentences. Use commas, parentheses, or separate sentences instead
+- Do NOT use semicolons to join clauses in prose. Use periods or conjunctions instead
 
 ## Paragraphs
 

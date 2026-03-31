@@ -217,6 +217,7 @@ When delivering a full paper outline:
 
 ## Checklist
 
+### Structure
 - [ ] One paper, one question — not trying to answer multiple things
 - [ ] Research question passes "Why not obvious?" and "Why should I care?"
 - [ ] Title is short, specific, informative (no puns or question marks)
@@ -236,4 +237,17 @@ When delivering a full paper outline:
 - [ ] Mechanisms distinguished from heterogeneity with theoretical hypotheses
 - [ ] Conclusion under 1.5 pages, no new results, no overclaiming
 - [ ] Paper under 40 pages total (30 for JDE-style journals)
+
+### Prose quality (AI-specific failure modes)
+- [ ] No patronizing transitions ("For pricing, this means...", "The implication is...", "Practitioners should be aware...")
+- [ ] No editorializing ("most important number", "most consequential finding", "confirms the intuition")
+- [ ] No student-level anthropomorphizing ("the coefficients tell a story", "makes economic sense")
+- [ ] No straw-man caveats ("This does not mean X" where nobody claimed X)
+- [ ] No defensive methodology justification (why OLS not ML, why classical not neural)
+- [ ] No marketing language ("designed to improve", "positioned to support", "value proposition")
+- [ ] No vague adjectives without numbers ("modest", "meaningful", "substantial", "reassuring")
+- [ ] No repeated "(coefficient = X, s.e. = Y)" syntax in running text — state economic meaning, cite the table
+- [ ] No fabricated client positions or assumed preferences not provided by the client
+- [ ] No rhetorical questions opening sections
+- [ ] All equation subscripts formally defined
 - [ ] No hedging, no intensifiers, no informal connectives, active voice

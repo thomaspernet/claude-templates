@@ -57,11 +57,41 @@ The introduction is 60% of whether the paper gets read. Structure it paragraph b
 - No colons to introduce clauses or results in running prose. Restructure
 - No em-dashes as punctuation. Use commas or separate sentences
 - No informal connectives ("Interestingly," "Importantly," "It is worth noting that")
-- No vague intensifiers ("very", "extremely", "highly")
+- No vague intensifiers ("very", "extremely", "highly", "modest", "meaningful", "substantial" without a number)
 - Never start with bare "This" — follow with the noun: "This evidence indicates" not "This indicates"
 - Short paragraphs. Each opens with a topic sentence stating the main claim
 - Do not open sections by announcing what they do ("This section investigates..."). Open with the substantive claim
+- Do not open sections with rhetorical questions ("How much should the premium decline?"). Open with a finding or analytical observation
 - One idea per paragraph. No paragraph longer than half a page
+
+## Prose Anti-Patterns — NEVER Do
+
+These are specific bad habits that AI-generated academic prose falls into. Catch and eliminate them during writing and review.
+
+**Patronizing transitions.** Never write "For pricing, this means..." or "The implication is..." or "The practical consequence is..." or "Practitioners should be aware that...". Weave the implication into the analytical sentence itself. If the finding has a practical use, state the finding in practical terms from the start. The reader does not need a separate paragraph explaining what they just read.
+
+**Editorializing before evidence.** Never write "The R-squared is the most important number in the table" or "This is the most consequential finding." Present the evidence. The reader judges importance. "Confirms the practitioner intuition" is also editorializing — state the finding neutrally.
+
+**Student-level anthropomorphizing.** Never write "The coefficients tell a clear story" or "The remaining variables tell their own story" or "The divergence makes economic sense." Coefficients do not tell stories. State what the estimates are and what they imply.
+
+**Straw-man caveats.** Never write "This does not mean X" unless someone actually argued X. "This does not mean medical malpractice is a low-risk line" rebuts a claim no reader made. Delete these.
+
+**Defensive methodology.** Never pre-emptively justify why you used OLS instead of machine learning, or classical methods instead of neural networks. Use the methods. If challenged, respond then. Defensive framing signals insecurity.
+
+**Marketing language.** Never write "The framework is designed to improve over time" or "positioned to support emerging applications" or "the value proposition." Describe what the framework does, not what it aspires to be.
+
+**Vague adjectives.** "Modest," "meaningful," "substantial," "reassuring," "well-behaved" — replace with a number or delete. "Modest improvement of 3.2 percent" should be "improvement of 3.2 percent." The reader judges modesty.
+
+**Repeated coefficient syntax in prose.** Do not dump "(coefficient = X, s.e. = Y)" into running text. State the economic meaning and cite the table. Use coefficient notation only in the first mention or when comparing across specifications. Example: instead of "the growth coefficient is -0.058 (s.e. = 0.014)," write "a 10-percentage-point increase in growth is associated with a 0.58-percentage-point lower loss ratio (Table 6)."
+
+**Fabricating positions.** Never attribute specific weights, rankings, or preferences to the client or reader unless they were explicitly provided. "The client ranks X as highest risk" requires evidence. If you do not have specific numbers, provide the empirical benchmarks and let the reader compare.
+
+## Equation Conventions
+
+- Define all subscripts formally after each equation: "where $i$ indexes insurers, $l$ indexes lines of business, and $t$ indexes accident years"
+- Use consistent notation across equations — do not switch between English words and LaTeX mid-report
+- Define the base category for dummy variable regressions
+- Specify clustering level in the equation note, not just in prose
 
 ## Tables and Figures
 
