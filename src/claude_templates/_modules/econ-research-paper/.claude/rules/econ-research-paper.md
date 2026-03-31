@@ -86,9 +86,16 @@ These are specific bad habits that AI-generated academic prose falls into. Catch
 
 **Fabricating positions.** Never attribute specific weights, rankings, or preferences to the client or reader unless they were explicitly provided. "The client ranks X as highest risk" requires evidence. If you do not have specific numbers, provide the empirical benchmarks and let the reader compare.
 
+## Acronyms and Abbreviations
+
+- Define every acronym on first use in the body text: "Full Name (ABBR)"
+- After first definition, use the abbreviation only
+- Never assume the reader knows domain-specific acronyms, even standard ones in the field
+- In the abstract, avoid acronyms where possible; if used, define them again in the body
+
 ## Equation Conventions
 
-- Define all subscripts formally after each equation: "where $i$ indexes insurers, $l$ indexes lines of business, and $t$ indexes accident years"
+- Define all subscripts formally after each equation: "where $i$ indexes [units], $l$ indexes [groups], and $t$ indexes [time periods]"
 - Use consistent notation across equations — do not switch between English words and LaTeX mid-report
 - Define the base category for dummy variable regressions
 - Specify clustering level in the equation note, not just in prose
